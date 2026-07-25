@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 20,
+  "revision": 22,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
@@ -131,7 +131,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-25T17:42:04.715Z",
+  "updated_at": "2026-07-25T17:42:11.038Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
@@ -148,6 +148,11 @@
       "phase": 3,
       "at": "2026-07-25T17:38:23.405Z",
       "note": "5 FR (tahta/giriş/ihlal vurgusu/tamamlama/yeni oyun), 4 NFR (perf 200ms, %100 çözülebilirlik, tarayıcı uyumu, klavye erişimi). Bulmaca kaynağı: sabit havuz (varsayım)."
+    },
+    {
+      "phase": 4,
+      "at": "2026-07-25T17:42:11.038Z",
+      "note": "Seçim: bulmaca havuzu + geçerlilik-koruyan izomorfizm (relabel/bant permütasyon/transpoze) çeşitlilik için; merkezi Uint8Array(81) state; tam doğrulama+hedefli class diff render; klasik script (ESM değil, file:// CORS nedeniyle)."
     }
   ]
 }

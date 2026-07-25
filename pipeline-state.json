@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 32,
+  "revision": 42,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
-  "current_phase": 6,
+  "current_phase": 7,
   "status": "running",
   "active_agents": [],
   "phases": {
@@ -107,6 +107,34 @@
       ],
       "note": "UI/UX (developer rolü, inline) — tek ekran ARIA grid + roving tabindex"
     },
+    "7": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-25T18:16:03.000Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-25T18:31:41.000Z",
+      "artifacts": [
+        "docs/07-security.md"
+      ],
+      "decisions": [
+        "DL-07-001"
+      ],
+      "note": "Güvenlik Tasarımı (security-reviewer devri) — istemci-tarafı güven sınırı, saldırı yüzeyi minimizasyonu, SEC-1..SEC-12 Faz 9/12'ye devredildi"
+    },
+    "8": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-25T18:16:03.000Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-25T18:17:34.000Z",
+      "artifacts": [
+        "docs/08-plan.md"
+      ],
+      "decisions": [
+        "DL-08-001"
+      ],
+      "note": "Planlama (business-analyst rolü, inline) — mimari modüllere hizalı 6 task, çevrimsiz bağımlılık grafı"
+    },
     "1-2": {
       "status": "done",
       "mode": "AUTOPILOT",
@@ -154,6 +182,16 @@
       "event": "recovered",
       "phase": 5,
       "detail": "ORPHANED_RUN kurtarıldı: docs/05-architecture.md zaten tamdı, eksik DL-05-001..004 yazıldı, kapı (structural) geçti, faz done işaretlendi"
+    },
+    {
+      "at": "2026-07-25T18:17:34.359Z",
+      "event": "zombie_agents_pruned",
+      "detail": "1 bayat ajan kaydı budandı (fazı koşmuyor — AF-090)"
+    },
+    {
+      "at": "2026-07-25T18:31:44.737Z",
+      "event": "zombie_agents_pruned",
+      "detail": "1 bayat ajan kaydı budandı (fazı koşmuyor — AF-090)"
     }
   ],
   "budget": {
@@ -207,10 +245,26 @@
         "model_recommended": "sonnet",
         "gate_passed": true,
         "at": "2026-07-25T18:14:00.000Z"
+      },
+      {
+        "phase": "8",
+        "duration_s": 91,
+        "model": null,
+        "model_recommended": "sonnet",
+        "gate_passed": true,
+        "at": "2026-07-25T18:17:34.000Z"
+      },
+      {
+        "phase": "7",
+        "duration_s": 938,
+        "model": null,
+        "model_recommended": "opus",
+        "gate_passed": true,
+        "at": "2026-07-25T18:31:41.000Z"
       }
     ]
   },
-  "updated_at": "2026-07-25T18:15:06.573Z",
+  "updated_at": "2026-07-25T18:34:25.690Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
@@ -237,6 +291,11 @@
       "phase": 5,
       "at": "2026-07-25T17:55:27.565Z",
       "note": "Mimari sabitlendi: 4 JS modülü (core/puzzles/render/app), pure Board+setValue, statik 81 element+class diff render, roving tabindex+aria-live erişilebilirlik. Faz 9 public arayüz imzaları mimari dokümanda sabit."
+    },
+    {
+      "phase": 6,
+      "at": "2026-07-25T18:15:19.088Z",
+      "note": "UI sözleşmesi: role=grid 81 statik hücre, roving tabindex, aria-live durum satırı, tek Yeni Oyun butonu. Faz 9 render.js bu DOM sözleşmesine göre yazılacak."
     }
   ],
   "product": {

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 16,
+  "revision": 18,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
@@ -106,7 +106,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-25T17:38:17.324Z",
+  "updated_at": "2026-07-25T17:38:23.405Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
@@ -118,6 +118,11 @@
       "phase": "1-2",
       "at": "2026-07-25T17:37:25.292Z",
       "note": "GO kararı verildi. KPI: yükleme≤5sn, bulmaca %100 çözülebilir, ihlal tespiti≤200ms."
+    },
+    {
+      "phase": 3,
+      "at": "2026-07-25T17:38:23.405Z",
+      "note": "5 FR (tahta/giriş/ihlal vurgusu/tamamlama/yeni oyun), 4 NFR (perf 200ms, %100 çözülebilirlik, tarayıcı uyumu, klavye erişimi). Bulmaca kaynağı: sabit havuz (varsayım)."
     }
   ]
 }

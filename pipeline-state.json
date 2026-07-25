@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 8,
+  "revision": 10,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
@@ -62,6 +62,13 @@
       }
     ]
   },
-  "updated_at": "2026-07-25T17:35:53.484Z",
-  "default_mode": "AUTOPILOT"
+  "updated_at": "2026-07-25T17:36:16.106Z",
+  "default_mode": "AUTOPILOT",
+  "checkpoints": [
+    {
+      "phase": 0,
+      "at": "2026-07-25T17:36:16.105Z",
+      "note": "Sudoku: solo/casual, backend'siz tek sayfa web oyunu, tek zorluk seviyesi, kural-ihlali anlık vurgu + Çözüldü bildirimi."
+    }
+  ]
 }

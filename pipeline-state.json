@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 14,
+  "revision": 16,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
-  "current_phase": "1-2",
+  "current_phase": 3,
   "status": "running",
   "active_agents": [],
   "phases": {
@@ -22,6 +22,20 @@
       "gate_passed": true,
       "started_at": "2026-07-25T17:32:37.000Z",
       "completed_at": "2026-07-25T18:00:00.000Z"
+    },
+    "3": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-25T17:40:00.000Z",
+      "gate_passed": true,
+      "artifacts": [
+        "docs/03-requirements.md"
+      ],
+      "decisions": [
+        "DL-03-001"
+      ],
+      "completed_at": "2026-07-25T17:42:00.000Z",
+      "note": "Requirement Analizi — 5 FR + 4 NFR"
     },
     "1-2": {
       "status": "done",
@@ -81,10 +95,18 @@
         "model_recommended": "sonnet",
         "gate_passed": true,
         "at": "2026-07-25T17:39:00.000Z"
+      },
+      {
+        "phase": "3",
+        "duration_s": 120,
+        "model": null,
+        "model_recommended": "sonnet",
+        "gate_passed": true,
+        "at": "2026-07-25T17:42:00.000Z"
       }
     ]
   },
-  "updated_at": "2026-07-25T17:37:25.292Z",
+  "updated_at": "2026-07-25T17:38:17.324Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {

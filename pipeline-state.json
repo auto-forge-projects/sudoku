@@ -1,20 +1,67 @@
 {
   "schema_version": 2,
-  "revision": 0,
+  "revision": 8,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
-  "repo_mode": "per-repo",
   "profile": "LITE",
-  "current_phase": null,
-  "status": "pending",
+  "current_phase": 0,
+  "status": "done",
   "active_agents": [],
-  "phases": {},
+  "phases": {
+    "0": {
+      "mode": "AUTOPILOT",
+      "status": "done",
+      "note": "Faz 0 (Fikir/Intake) üretildi (orchestrator inline, business-analyst rolü) — onaylı 0b brief girdi alındı",
+      "artifacts": [
+        "docs/00-refined-brief.md",
+        "docs/00-idea.md"
+      ],
+      "decisions": [
+        "DL-00-001"
+      ],
+      "gate_passed": true,
+      "started_at": "2026-07-25T17:32:37.000Z",
+      "completed_at": "2026-07-25T18:00:00.000Z"
+    }
+  },
   "feedback_loops": [],
   "pending_human_review": [],
-  "history": [],
+  "history": [
+    {
+      "event": "refine",
+      "phase": 0,
+      "detail": "Faz 0b: ham fikir rafine briefe cevrildi (slug: basit-sudoku-oyunu-yap -> sudoku)"
+    },
+    {
+      "at": "2026-07-25T17:32:36.867Z",
+      "event": "mode_changed",
+      "detail": "AUTOPILOT (aktif+sonrası; fazlar: 0)"
+    },
+    {
+      "at": "2026-07-25T17:32:37.067Z",
+      "event": "profile_changed",
+      "detail": "LITE"
+    },
+    {
+      "event": "phase_completed",
+      "phase": 0,
+      "detail": "docs/00-idea.md üretildi (orchestrator inline, business-analyst rolü); kapı geçti (structural)"
+    }
+  ],
   "budget": {
     "model_calls": {},
-    "notes": ""
+    "notes": "",
+    "telemetry": [
+      {
+        "phase": "0",
+        "duration_s": 1643,
+        "model": null,
+        "model_recommended": "haiku",
+        "gate_passed": true,
+        "at": "2026-07-25T18:00:00.000Z"
+      }
+    ]
   },
-  "updated_at": null
+  "updated_at": "2026-07-25T17:35:53.484Z",
+  "default_mode": "AUTOPILOT"
 }

@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 26,
+  "revision": 32,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
-  "current_phase": 5,
+  "current_phase": 6,
   "status": "running",
   "active_agents": [],
   "phases": {
@@ -70,6 +70,42 @@
         "DL-05-004"
       ],
       "note": "Mimari Tasarım (architect rolü, inline) — kesilmiş koşum kurtarıldı: artefakt zaten tamdı, yalnız DL-05-001..004 eksikti; resume ile tamamlandı"
+    },
+    "6": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-25T18:11:00.000Z",
+      "tasks": [
+        {
+          "title": "Yüzey sözleşmesi (ekran+bileşenler)",
+          "status": "done"
+        },
+        {
+          "title": "Ana akış (uçtan uca) diyagramı",
+          "status": "done"
+        },
+        {
+          "title": "Çıktı/hata durumları",
+          "status": "done"
+        },
+        {
+          "title": "DL-06-001 yaz",
+          "status": "done"
+        },
+        {
+          "title": "Kapı doğrula + commit + push",
+          "status": "done"
+        }
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-25T18:14:00.000Z",
+      "artifacts": [
+        "docs/06-uiux/06-uiux.md"
+      ],
+      "decisions": [
+        "DL-06-001"
+      ],
+      "note": "UI/UX (developer rolü, inline) — tek ekran ARIA grid + roving tabindex"
     },
     "1-2": {
       "status": "done",
@@ -163,10 +199,18 @@
         "model_recommended": "opus",
         "gate_passed": true,
         "at": "2026-07-25T18:05:00.000Z"
+      },
+      {
+        "phase": "6",
+        "duration_s": 180,
+        "model": null,
+        "model_recommended": "sonnet",
+        "gate_passed": true,
+        "at": "2026-07-25T18:14:00.000Z"
       }
     ]
   },
-  "updated_at": "2026-07-25T17:55:27.565Z",
+  "updated_at": "2026-07-25T18:15:06.573Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
@@ -194,5 +238,9 @@
       "at": "2026-07-25T17:55:27.565Z",
       "note": "Mimari sabitlendi: 4 JS modülü (core/puzzles/render/app), pure Board+setValue, statik 81 element+class diff render, roving tabindex+aria-live erişilebilirlik. Faz 9 public arayüz imzaları mimari dokümanda sabit."
     }
-  ]
+  ],
+  "product": {
+    "type": "web",
+    "name": "sudoku"
+  }
 }

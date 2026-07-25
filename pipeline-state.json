@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 22,
+  "revision": 26,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
-  "current_phase": 4,
+  "current_phase": 5,
   "status": "running",
   "active_agents": [],
   "phases": {
@@ -54,6 +54,23 @@
       "completed_at": "2026-07-25T17:42:30.000Z",
       "note": "Çözüm Analizi (architect devri) — havuz+izomorfizm, merkezi state, tam doğrulama render, klasik script paketleme"
     },
+    "5": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-25T17:43:00.000Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-25T18:05:00.000Z",
+      "artifacts": [
+        "docs/05-architecture.md"
+      ],
+      "decisions": [
+        "DL-05-001",
+        "DL-05-002",
+        "DL-05-003",
+        "DL-05-004"
+      ],
+      "note": "Mimari Tasarım (architect rolü, inline) — kesilmiş koşum kurtarıldı: artefakt zaten tamdı, yalnız DL-05-001..004 eksikti; resume ile tamamlandı"
+    },
     "1-2": {
       "status": "done",
       "mode": "AUTOPILOT",
@@ -91,6 +108,16 @@
       "event": "phase_completed",
       "phase": 0,
       "detail": "docs/00-idea.md üretildi (orchestrator inline, business-analyst rolü); kapı geçti (structural)"
+    },
+    {
+      "at": "2026-07-25T17:55:27.450Z",
+      "event": "zombie_agents_pruned",
+      "detail": "1 bayat ajan kaydı budandı (fazı koşmuyor — AF-090)"
+    },
+    {
+      "event": "recovered",
+      "phase": 5,
+      "detail": "ORPHANED_RUN kurtarıldı: docs/05-architecture.md zaten tamdı, eksik DL-05-001..004 yazıldı, kapı (structural) geçti, faz done işaretlendi"
     }
   ],
   "budget": {
@@ -128,10 +155,18 @@
         "model_recommended": "opus",
         "gate_passed": true,
         "at": "2026-07-25T17:42:30.000Z"
+      },
+      {
+        "phase": "5",
+        "duration_s": 1320,
+        "model": null,
+        "model_recommended": "opus",
+        "gate_passed": true,
+        "at": "2026-07-25T18:05:00.000Z"
       }
     ]
   },
-  "updated_at": "2026-07-25T17:42:11.038Z",
+  "updated_at": "2026-07-25T17:55:27.565Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
@@ -153,6 +188,11 @@
       "phase": 4,
       "at": "2026-07-25T17:42:11.038Z",
       "note": "Seçim: bulmaca havuzu + geçerlilik-koruyan izomorfizm (relabel/bant permütasyon/transpoze) çeşitlilik için; merkezi Uint8Array(81) state; tam doğrulama+hedefli class diff render; klasik script (ESM değil, file:// CORS nedeniyle)."
+    },
+    {
+      "phase": 5,
+      "at": "2026-07-25T17:55:27.565Z",
+      "note": "Mimari sabitlendi: 4 JS modülü (core/puzzles/render/app), pure Board+setValue, statik 81 element+class diff render, roving tabindex+aria-live erişilebilirlik. Faz 9 public arayüz imzaları mimari dokümanda sabit."
     }
   ]
 }

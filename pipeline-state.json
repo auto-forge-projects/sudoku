@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 12,
+  "revision": 14,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
@@ -84,13 +84,18 @@
       }
     ]
   },
-  "updated_at": "2026-07-25T17:37:16.188Z",
+  "updated_at": "2026-07-25T17:37:25.292Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {
       "phase": 0,
       "at": "2026-07-25T17:36:16.105Z",
       "note": "Sudoku: solo/casual, backend'siz tek sayfa web oyunu, tek zorluk seviyesi, kural-ihlali anlık vurgu + Çözüldü bildirimi."
+    },
+    {
+      "phase": "1-2",
+      "at": "2026-07-25T17:37:25.292Z",
+      "note": "GO kararı verildi. KPI: yükleme≤5sn, bulmaca %100 çözülebilir, ihlal tespiti≤200ms."
     }
   ]
 }

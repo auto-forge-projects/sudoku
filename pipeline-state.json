@@ -1,19 +1,19 @@
 {
   "schema_version": 2,
-  "revision": 72,
+  "revision": 79,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
-  "current_phase": 9,
+  "current_phase": 10,
   "status": "running",
   "active_agents": [
     {
-      "agent": "developer",
-      "model": "sonnet",
-      "phase": 9,
-      "task": "TASK-005 kapat + TASK-006 sürdür",
-      "started_at": "2026-07-26T00:00:00.000Z",
-      "last_update": "2026-07-26T17:18:25.003Z",
+      "agent": "test-engineer",
+      "model": "claude-sonnet-5",
+      "phase": 11,
+      "task": "contract testi + test-plan/results",
+      "started_at": "2026-07-26T17:20:00.000Z",
+      "last_update": "2026-07-26T17:20:00.000Z",
       "via": "inline"
     }
   ],
@@ -147,7 +147,7 @@
     },
     "9": {
       "mode": "AUTOPILOT",
-      "status": "running",
+      "status": "done",
       "started_at": "2026-07-25T18:36:00.000Z",
       "tasks": [
         {
@@ -180,9 +180,51 @@
         },
         {
           "title": "DL-09-001 yaz + kapı doğrula + commit + push",
+          "status": "done"
+        }
+      ],
+      "gate_passed": true,
+      "completed_at": "2026-07-26T17:19:00.000Z"
+    },
+    "10": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-26T17:19:30.000Z",
+      "tasks": [
+        {
+          "title": "npm test bağımsız doğrulama",
           "status": "in_progress"
+        },
+        {
+          "title": "src/ + tests/ elle okuma (blind)",
+          "status": "pending"
+        },
+        {
+          "title": "FR/NFR izlenebilirlik + SEC uygulama kontrolü",
+          "status": "pending"
+        },
+        {
+          "title": "docs/10-review/PR-1.md yaz",
+          "status": "pending"
+        },
+        {
+          "title": "DL-10-001 yaz",
+          "status": "pending"
+        },
+        {
+          "title": "commit talebi + kuyruk drain",
+          "status": "pending"
+        },
+        {
+          "title": "state kapanış (status/gate/review_cycles)",
+          "status": "pending"
         }
       ]
+    },
+    "11": {
+      "mode": "AUTOPILOT",
+      "status": "running",
+      "started_at": "2026-07-26T17:20:00.000Z"
     },
     "1-2": {
       "status": "done",
@@ -310,10 +352,20 @@
         "model_recommended": "opus",
         "gate_passed": true,
         "at": "2026-07-25T18:31:41.000Z"
+      },
+      {
+        "phase": "9",
+        "duration_s": 81780,
+        "model": null,
+        "model_recommended": "sonnet",
+        "gate_passed": true,
+        "at": "2026-07-26T17:19:00.000Z",
+        "suspect": true,
+        "suspect_reason": "23 sa — kesinti/bekleme süreye dahil olmuş olabilir (duvar saati)"
       }
     ]
   },
-  "updated_at": "2026-07-26T17:18:50.862Z",
+  "updated_at": "2026-07-26T17:23:22.706Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {

@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "revision": 92,
+  "revision": 96,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
-  "current_phase": 12,
+  "current_phase": 13,
   "status": "running",
   "active_agents": [],
   "phases": {
@@ -203,11 +203,11 @@
         },
         {
           "title": "commit talebi + kuyruk drain",
-          "status": "in_progress"
+          "status": "done"
         },
         {
           "title": "state kapanış (status/gate/review_cycles)",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "gate_passed": true,
@@ -245,6 +245,20 @@
       "started_at": "2026-07-26T17:24:00.000Z",
       "gate_passed": true,
       "completed_at": "2026-07-26T17:26:00.000Z"
+    },
+    "13": {
+      "status": "done",
+      "mode": "AUTOPILOT",
+      "started_at": "2026-07-26T18:50:00.000Z",
+      "gate_passed": true,
+      "completed_at": "2026-07-26T18:52:00.000Z",
+      "artifacts": [
+        "docs/13-release-notes.md"
+      ],
+      "decisions": [
+        "DL-13-001"
+      ],
+      "note": "Release (devops-engineer rolü, inline) — v0.1.0, rollback planı"
     },
     "1-2": {
       "status": "done",
@@ -406,10 +420,18 @@
         "model_recommended": "opus",
         "gate_passed": true,
         "at": "2026-07-26T18:48:00.000Z"
+      },
+      {
+        "phase": "13",
+        "duration_s": 120,
+        "model": null,
+        "model_recommended": "haiku",
+        "gate_passed": true,
+        "at": "2026-07-26T18:52:00.000Z"
       }
     ]
   },
-  "updated_at": "2026-07-26T18:48:11.417Z",
+  "updated_at": "2026-07-26T18:50:20.630Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {

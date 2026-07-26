@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 65,
+  "revision": 66,
   "project": "sudoku",
   "workspace": "workspace/sudoku",
   "profile": "LITE",
@@ -13,7 +13,7 @@
       "phase": 9,
       "task": "TASK-005 kapat + TASK-006 sürdür",
       "started_at": "2026-07-26T00:00:00.000Z",
-      "last_update": "2026-07-26T17:17:03.860Z",
+      "last_update": "2026-07-26T17:17:23.299Z",
       "via": "inline"
     }
   ],
@@ -313,7 +313,7 @@
       }
     ]
   },
-  "updated_at": "2026-07-26T17:17:19.835Z",
+  "updated_at": "2026-07-26T17:17:23.299Z",
   "default_mode": "AUTOPILOT",
   "checkpoints": [
     {

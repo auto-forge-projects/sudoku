@@ -1,0 +1,10 @@
+{
+  "name": "sudoku",
+  "version": "0.1.0",
+  "private": true,
+  "description": "İstemci-taraflı, sıfır bağımlılık sudoku oyunu (bkz. docs/05-architecture.md, docs/07-security.md)",
+  "scripts": {
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage"
+  }
+}

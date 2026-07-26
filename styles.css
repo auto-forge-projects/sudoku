@@ -1,0 +1,72 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f8f8f8;
+  color: #1a1a1a;
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  aspect-ratio: 1;
+  max-width: 480px;
+  width: 100%;
+  margin: 1rem auto;
+  border: 2px solid #1a1a1a;
+  background: #fff;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bbb;
+  font-size: 1.4rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell:nth-child(9n+3),
+.cell:nth-child(9n+6) {
+  border-right: 2px solid #1a1a1a;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+  border-bottom: 2px solid #1a1a1a;
+}
+
+.cell.given {
+  background: #e0e0e0;
+  font-weight: 700;
+}
+
+.cell.selected {
+  outline: 3px solid #2563eb;
+  outline-offset: -3px;
+  background: #dbeafe;
+}
+
+.cell.conflict {
+  background: #fde2e2;
+  color: #a41818;
+}
+
+#status {
+  min-height: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+#new-game {
+  font-size: 1rem;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+}

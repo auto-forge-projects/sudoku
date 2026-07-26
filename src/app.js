@@ -84,6 +84,9 @@ const SudokuApp = { init };
 
 if (typeof window !== 'undefined') {
   window.SudokuApp = SudokuApp;
+  window.addEventListener('DOMContentLoaded', () => {
+    init(document, window.SudokuPuzzles, Math.random);
+  });
 }
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = SudokuApp;

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'none'; connect-src 'none'; object-src 'none'; base-uri 'none'">
+<title>Sudoku</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<noscript>Bu oyun JavaScript gerektirir.</noscript>
+<h1>Sudoku</h1>
+<div role="grid" id="board" aria-label="Sudoku tahtası">
+  <div class="cell" role="gridcell" data-index="0" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="1" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="2" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="3" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="4" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="5" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="6" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="7" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="8" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="9" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="10" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="11" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="12" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="13" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="14" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="15" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="16" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="17" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="18" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="19" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="20" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="21" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="22" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="23" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="24" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="25" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="26" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="27" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="28" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="29" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="30" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="31" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="32" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="33" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="34" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="35" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="36" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="37" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="38" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="39" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="40" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="41" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="42" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="43" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="44" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="45" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="46" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="47" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="48" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="49" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="50" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="51" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="52" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="53" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="54" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="55" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="56" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="57" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="58" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="59" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="60" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="61" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="62" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="63" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="64" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="65" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="66" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="67" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="68" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="69" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="70" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="71" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="72" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="73" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="74" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="75" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="76" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="77" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="78" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="79" tabindex="-1"></div>
+  <div class="cell" role="gridcell" data-index="80" tabindex="-1"></div>
+</div>
+<div id="status" aria-live="polite"></div>
+<button id="new-game" type="button">Yeni Oyun</button>
+<script src="src/sudoku-core.js"></script>
+<script src="src/puzzles.js"></script>
+<script src="src/render.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>
